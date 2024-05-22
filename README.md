@@ -1,4 +1,4 @@
-## Evaluacion .
+## Evaluación de unidad .
 
 El proyecto realizado también se encuentra en GitHub(**`https://github.com/VillaltaJose/SimpleChat/tree/nodejs`**).
 
@@ -11,3 +11,21 @@ El proyecto realizado también se encuentra en GitHub(**`https://github.com/Vill
 - **Iniciar la aplicación angular**
 La aplicación se debe iniciar en el puerto 80 (**localhost:80**) , la aplicacion mostrara la frase solicitada
 
+
+## Archivo dockerfile
+FROM node:latest AS build
+WORKDIR /app/home
+
+COPY prueba_docker_CollaguazoDaniel/ /app/home
+
+RUN npm install --force
+RUN npm run build --prod
+
+#FROM ubuntu:latest
+#RUN apt-get -y update && apt-get -y install nginx
+FROM nginx:1.17.1-alpine
+COPY --from=build /app/home/dist/prueba-docker-collaguazo-daniel /usr/share/nginx/html
+
+ CMD ["sh", "-c", "nginx -g 'daemon off;'"]
+
+EXPOSE 80
