@@ -9,11 +9,8 @@ RUN npm run build --prod
 # FROM ubuntu:latest
 # RUN apt-get -y update && apt-get -y install nginx
 FROM nginx:1.17.1-alpine
-
-#COPY --from=build /app/home/dist/prueba-docker-collaguazo-daniel  /var/www/abdhesh/tech/
-
 COPY --from=build /app/home/dist/prueba-docker-collaguazo-daniel /usr/share/nginx/html
 
-CMD ["nginx", "-g", "daemon off;"]
+ CMD ["sh", "-c", "nginx -g 'daemon off;'"]
 
-EXPOSE 80   
+EXPOSE 80
