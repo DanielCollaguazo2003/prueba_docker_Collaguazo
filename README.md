@@ -1,6 +1,6 @@
 ## Evaluación de unidad .
 
-El proyecto realizado también se encuentra en GitHub(**`https://github.com/VillaltaJose/SimpleChat/tree/nodejs`**).
+Proyecto realizado por: **Daniel Alfredo Collaguazo Malla**
 
 ### Como construir y levantar la imagen.
 **Construir la aplicación:** docker build -t danielcollaguazo/prueba_docker_collaguazo2
