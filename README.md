@@ -2,6 +2,8 @@
 
 Proyecto realizado por: **Daniel Alfredo Collaguazo Malla**
 
+# Proyecto fronted en repositorio aparte por fallos en la misma subida: https://github.com/DanielCollaguazo2003/Proyecto_docker
+
 ### Como construir y levantar la imagen.
 **Construir la aplicación:** docker build -t danielcollaguazo/prueba_docker_collaguazo2
 
